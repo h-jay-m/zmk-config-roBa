@@ -120,9 +120,9 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                &trans                &trans      &trans       &trans    &trans
+&trans  &trans  &trans  &trans  &trans                                &kp C_VOLUME_UP       &trans      &trans       &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &kp LEFT_ARROW    &mkp MB4              &mkp MB1    &mkp MB2     &mkp MB5  &kp RIGHT_ARROW
-&trans  &trans  &trans  &trans  &trans  &trans      &trans            &trans                &kp K_COPY  &kp K_PASTE  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans            &kp C_VOLUME_DOWN     &kp K_COPY  &kp K_PASTE  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &kp LEFT_CONTROL  &kp LC(LEFT_COMMAND)                                     &trans
             >;
         };
