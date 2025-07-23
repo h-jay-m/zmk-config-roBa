@@ -78,13 +78,33 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        mac_layer {
+            compatible = "zmk,keymap";
+            label = "mac_layer";
+            bindings = <
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                                     &kp Y        &kp U  &lt 5 I      &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                    &kp MINUS                   &kp H        &kp J  &kp K        &kp L    &kp SQT
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &mt LG(COLON) RIGHT_COMMAND      &mt SEMICOLON LEFT_COMMAND  &kp N        &kp M  &lt 5 COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 INT_HENKAN  &lt 2 SPACE  &lt 7 AT_SIGN                    &kp BACKSPACE               &lt 1 ENTER                               &tog 4
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 INT_HENKAN  &lt 2 SPACE  &kp CAPS                    &kp BACKSPACE               &lt 1 ENTER                               &tog 4
             >;
+            // このレイヤーはmacOSの場合に有効にする
+            layers = <0>; // ベースレイヤーにこの設定を適用する例
+            condition = <HID_USAGE_GD_OS_MAC>;
+        };
+
+        win_layer {
+            compatible = "zmk,keymap";
+            label = "win_layer";
+            bindings = <
+&kp Q             &kp W         &kp E         &kp R                        &kp T                                                                     &kp Y        &kp U  &lt 5 I      &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                    &kp MINUS                   &kp H        &kp J  &kp K        &kp L    &kp SQT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &mt LG(COLON) RIGHT_COMMAND      &mt SEMICOLON LEFT_COMMAND  &kp N        &kp M  &lt 5 COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 INT_HENKAN  &lt 2 SPACE  &kp GRAVE                    &kp BACKSPACE               &lt 1 ENTER                               &tog 4
+            >;
+            // このレイヤーはWindowsの場合に有効にする
+            layers = <0>; // ベースレイヤーにこの設定を適用する例
+            condition = <HID_USAGE_GD_OS_WINDOWS>;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
