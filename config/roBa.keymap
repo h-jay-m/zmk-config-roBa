@@ -82,7 +82,6 @@
             compatible = "zmk,keymap";
             label = "mac_layer";
             bindings = <
-            bindings = <
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                                     &kp Y        &kp U  &lt 5 I      &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                    &kp MINUS                   &kp H        &kp J  &kp K        &kp L    &kp SQT
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &mt LG(COLON) RIGHT_COMMAND      &mt SEMICOLON LEFT_COMMAND  &kp N        &kp M  &lt 5 COMMA  &kp DOT  &kp SLASH
