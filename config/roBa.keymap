@@ -77,6 +77,10 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+
+            scroll_processor: scroll_processor {
+            compatible = "zmk,input-processor";
+            input-processors = <&ip_scroll>;
         };
     };
 
@@ -139,6 +143,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
+            sensor-bindings = <&scroll_processor>;
         };
 
         layer_6 {
