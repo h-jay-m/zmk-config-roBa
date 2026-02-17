@@ -45,7 +45,7 @@
         };
 
         double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
+            bindings = <&kp LS(RETURN)>;
             key-positions = <20 21>;
         };
 
